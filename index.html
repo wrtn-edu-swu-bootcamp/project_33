@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>빈강의실 - 공강교실 찾기</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 헤더 -->
+        <header class="header">
+            <h1 class="title">🏫 빈강의실</h1>
+            <p class="subtitle">공강교실을 빠르게 찾아보세요</p>
+        </header>
+
+        <!-- 검색 섹션 -->
+        <section class="search-section">
+            <div class="search-box">
+                <h2 class="section-title">검색하기</h2>
+                
+                <!-- 건물 선택 -->
+                <div class="input-group">
+                    <label class="label">건물 선택</label>
+                    <div class="building-buttons">
+                        <button class="building-btn" data-building="50주년">50주년 기념관</button>
+                        <button class="building-btn" data-building="제1과학관">제1과학관</button>
+                        <button class="building-btn" data-building="제2과학관">제2과학관</button>
+                        <button class="building-btn" data-building="인문사회관">인문사회관</button>
+                        <button class="building-btn" data-building="예술관">예술관</button>
+                    </div>
+                </div>
+                
+                <!-- 요일 선택 -->
+                <div class="input-group">
+                    <label class="label">요일 선택</label>
+                    <div class="day-buttons">
+                        <button class="day-btn" data-day="월">월</button>
+                        <button class="day-btn" data-day="화">화</button>
+                        <button class="day-btn" data-day="수">수</button>
+                        <button class="day-btn" data-day="목">목</button>
+                        <button class="day-btn" data-day="금">금</button>
+                    </div>
+                </div>
+
+                <!-- 시간 선택 -->
+                <div class="input-group">
+                    <label class="label">시간 선택</label>
+                    <div class="time-buttons">
+                        <button class="time-btn" data-block="1">
+                            <span class="time-name">1-2교시</span>
+                            <span class="time-range">09:00-12:00</span>
+                        </button>
+                        <button class="time-btn" data-block="2">
+                            <span class="time-name">3-4교시</span>
+                            <span class="time-range">12:00-15:00</span>
+                        </button>
+                        <button class="time-btn" data-block="3">
+                            <span class="time-name">5-6교시</span>
+                            <span class="time-range">15:00-18:00</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 검색 버튼 -->
+                <button class="search-btn" id="searchBtn" disabled>검색하기</button>
+            </div>
+        </section>
+
+        <!-- 결과 섹션 -->
+        <section class="results-section" id="resultsSection" style="display: none;">
+            <div class="results-header">
+                <h2 class="section-title">검색 결과</h2>
+                <p class="search-info" id="searchInfo"></p>
+            </div>
+            <div class="results-container" id="resultsContainer">
+                <!-- 결과가 여기에 표시됩니다 -->
+            </div>
+        </section>
+
+        <!-- 빈 상태 -->
+        <div class="empty-state" id="emptyState" style="display: none;">
+            <div class="empty-icon">📭</div>
+            <h3>빈 강의실이 없습니다</h3>
+            <p>다른 요일이나 시간을 선택해보세요</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

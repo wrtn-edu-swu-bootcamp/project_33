@@ -1,0 +1,426 @@
+/* 기본 스타일 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Malgun Gothic', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* 헤더 */
+.header {
+    text-align: center;
+    color: white;
+    margin-bottom: 30px;
+    animation: fadeIn 0.6s ease-in;
+}
+
+.title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* 검색 섹션 */
+.search-section {
+    margin-bottom: 30px;
+}
+
+.search-box {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    animation: slideUp 0.6s ease-out;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 25px;
+}
+
+.label {
+    display: block;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 12px;
+}
+
+/* 건물 버튼 */
+.building-buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+}
+
+.building-btn {
+    padding: 15px 20px;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    background: white;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.building-btn:hover {
+    border-color: #764ba2;
+    color: #764ba2;
+    transform: translateY(-2px);
+}
+
+.building-btn.active {
+    background: #764ba2;
+    color: white;
+    border-color: #764ba2;
+}
+
+/* 요일 버튼 */
+.day-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.day-btn {
+    flex: 1;
+    min-width: 60px;
+    padding: 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    background: white;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.day-btn:hover {
+    border-color: #667eea;
+    color: #667eea;
+    transform: translateY(-2px);
+}
+
+.day-btn.active {
+    background: #667eea;
+    color: white;
+    border-color: #667eea;
+}
+
+/* 시간 버튼 */
+.time-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.time-btn {
+    padding: 18px 20px;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.time-btn:hover {
+    border-color: #667eea;
+    transform: translateX(5px);
+}
+
+.time-btn.active {
+    background: #667eea;
+    border-color: #667eea;
+}
+
+.time-btn.active .time-name,
+.time-btn.active .time-range {
+    color: white;
+}
+
+.time-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.time-range {
+    font-size: 0.9rem;
+    color: #999;
+}
+
+/* 검색 버튼 */
+.search-btn {
+    width: 100%;
+    padding: 18px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.search-btn:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.search-btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+/* 결과 섹션 */
+.results-section {
+    animation: fadeIn 0.6s ease-in;
+}
+
+.results-header {
+    background: white;
+    border-radius: 20px 20px 0 0;
+    padding: 25px 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.search-info {
+    color: #667eea;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 8px;
+}
+
+.results-container {
+    background: white;
+    border-radius: 0 0 20px 20px;
+    padding: 0 30px 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* 교실 카드 */
+.room-card {
+    border: 2px solid #f0f0f0;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+    animation: slideUp 0.4s ease-out;
+}
+
+.room-card:hover {
+    border-color: #667eea;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
+}
+
+.room-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.room-name {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #333;
+}
+
+.room-capacity {
+    font-size: 0.95rem;
+    color: #667eea;
+    font-weight: 600;
+}
+
+.room-floor {
+    font-size: 0.9rem;
+    color: #999;
+    margin-bottom: 12px;
+}
+
+.room-facilities {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.facility-tag {
+    display: inline-block;
+    padding: 6px 12px;
+    background: #f0f4ff;
+    color: #667eea;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+/* 빈 상태 */
+.empty-state {
+    background: white;
+    border-radius: 20px;
+    padding: 60px 30px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.6s ease-in;
+}
+
+.empty-icon {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.empty-state h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.empty-state p {
+    color: #999;
+    font-size: 1rem;
+}
+
+/* 애니메이션 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .search-box {
+        padding: 20px;
+    }
+
+    .building-buttons {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+
+    .building-btn {
+        padding: 12px 15px;
+        font-size: 0.85rem;
+    }
+
+    .day-btn {
+        min-width: 50px;
+        padding: 12px;
+        font-size: 0.9rem;
+    }
+
+    .time-btn {
+        padding: 15px;
+    }
+
+    .time-name {
+        font-size: 1rem;
+    }
+
+    .time-range {
+        font-size: 0.85rem;
+    }
+
+    .room-name {
+        font-size: 1.1rem;
+    }
+
+    .results-header,
+    .results-container {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 2rem;
+    }
+
+    .subtitle {
+        font-size: 0.95rem;
+    }
+
+    .search-box {
+        padding: 18px;
+    }
+
+    .building-buttons {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .building-btn {
+        padding: 12px;
+        font-size: 0.8rem;
+    }
+
+    .day-buttons {
+        gap: 8px;
+    }
+
+    .day-btn {
+        min-width: 45px;
+        padding: 10px;
+        font-size: 0.85rem;
+    }
+
+    .room-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+}
