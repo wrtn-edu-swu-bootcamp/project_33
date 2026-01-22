@@ -88,8 +88,8 @@ body {
 
 .search-box {
     background: 
-        linear-gradient(135deg, rgba(227, 242, 253, 0.95) 0%, rgba(187, 222, 251, 0.95) 50%, rgba(144, 202, 249, 0.95) 100%),
-        url('다운로드.png') center / 600px no-repeat;
+        linear-gradient(135deg, rgba(227, 242, 253, 0.85) 0%, rgba(187, 222, 251, 0.85) 50%, rgba(144, 202, 249, 0.85) 100%),
+        url('다운로드.png') center top / 900px no-repeat;
     border-radius: 20px;
     padding: 30px;
     box-shadow: 
