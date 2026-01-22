@@ -70,16 +70,16 @@ body {
 /* 건물 버튼 */
 .building-buttons {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 10px;
 }
 
 .building-btn {
-    padding: 15px 20px;
+    padding: 18px 20px;
     border: 2px solid #e0e0e0;
     border-radius: 12px;
     background: white;
-    font-size: 0.95rem;
+    font-size: 1.1rem;
     font-weight: 600;
     color: #666;
     cursor: pointer;
