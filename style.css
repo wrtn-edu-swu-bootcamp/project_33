@@ -349,7 +349,7 @@ body {
     }
 
     .building-buttons {
-        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        grid-template-columns: repeat(3, 1fr);
     }
 
     .building-btn {
@@ -399,7 +399,7 @@ body {
     }
 
     .building-buttons {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(3, 1fr);
         gap: 8px;
     }
 
