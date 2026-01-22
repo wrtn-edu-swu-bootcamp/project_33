@@ -21,7 +21,7 @@ function generateRoomData() {
   ];
 
   const buildingConfig = {
-    "50주년": { name: "50주년 기념관", count: 59, floors: [1, 2, 3, 4, 5, 6] },
+    "50주년": { name: "50주년 기념관", count: 59, floors: [2, 3, 4, 5, 6] },
     "인문사회관": { name: "인문사회관", count: 46, floors: [1, 2, 3, 4, 5, 6] },
     "조형예술관": { name: "조형예술관", count: 24, floors: [1, 2, 3, 4, 5, 6] },
     "제1과학관": { name: "제1과학관", count: 22, floors: [1, 2, 3, 4, 5, 6] },
