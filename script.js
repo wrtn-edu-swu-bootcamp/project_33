@@ -56,9 +56,9 @@ function generateRoomData() {
         };
         
         for (const day in schedule) {
-          const numClasses = Math.floor(Math.random() * 4);
+          const numClasses = Math.floor(Math.random() * 5);
           for (let j = 0; j < numClasses; j++) {
-            const classTime = Math.floor(Math.random() * 3) + 1;
+            const classTime = Math.floor(Math.random() * 6) + 1;
             if (!schedule[day].includes(classTime)) {
               schedule[day].push(classTime);
             }
@@ -92,9 +92,12 @@ function generateRoomData() {
 // 데이터 (JSON 파일 대신 직접 포함)
 const roomsData = {
   "timeBlocks": [
-    { "id": 1, "name": "1-2교시", "time": "09:00-12:00" },
-    { "id": 2, "name": "3-4교시", "time": "12:00-15:00" },
-    { "id": 3, "name": "5-6교시", "time": "15:00-18:00" }
+    { "id": 1, "name": "1교시", "time": "09:00-10:00" },
+    { "id": 2, "name": "2교시", "time": "10:00-11:00" },
+    { "id": 3, "name": "3교시", "time": "11:00-12:00" },
+    { "id": 4, "name": "4교시", "time": "12:00-13:00" },
+    { "id": 5, "name": "5교시", "time": "13:00-14:00" },
+    { "id": 6, "name": "6교시", "time": "14:00-15:00" }
   ],
   "buildings": generateRoomData()
 };
