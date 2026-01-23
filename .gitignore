@@ -1,0 +1,20 @@
+# 미디어 파일
+*.mp4
+*.pptx
+*.hwpx
+
+# Node modules
+node_modules/
+package-lock.json
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.local
